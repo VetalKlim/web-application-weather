@@ -1,0 +1,306 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  background: var(--background-header);
+  border-bottom: 2px solid azure;
+
+
+  .menu, .position-short-info-city, .nameApp {
+    line-height: 2;
+    padding: 5px;
+  }
+
+  .menu {
+    cursor: pointer;
+    transition: all 0.3s;
+    position: fixed;
+    height: 35px;
+    z-index: 1100;
+
+    .line {
+      display: block;
+      margin: 3px;
+      width: 20px;
+      height: 2px;
+      background: white;
+      position: relative;
+      top: 3px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      opacity: 0.6;
+
+    }
+  }
+
+  .menu-active {
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 1px 7px;
+    position: fixed;
+    height: 35px;
+    z-index: 1100;
+
+    .line {
+      display: none;
+      margin: 3px;
+      width: 20px;
+      height: 2px;
+      background: var(--color-text-white);
+      position: relative;
+      top: 3px;
+      transition: all 0.3s;
+    }
+
+    .line:first-child {
+      background: linear-gradient(139deg, rgba(138, 43, 226, 1) 0%, rgba(138, 43, 226, 1) 47%);
+      display: block;
+      width: 20px;
+      transform: rotate(232deg);
+      top: 13px;
+      transition: all 0.3s;
+    }
+
+    .line:last-child {
+      background: linear-gradient(139deg, rgba(138, 43, 226, 1) 0%, rgba(138, 43, 226, 1) 47%);
+      display: block;
+      width: 20px;
+      transform: rotate(307deg);
+      top: 8px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      //background: #327AA0;
+    }
+  }
+
+  .info {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    .position-short-info-city {
+      ul {
+        li {
+          margin: 0 10px;
+
+          img {
+            position: relative;
+            top: -13px;
+          }
+
+          .dropdown-trigger {
+            width: 126px;
+            display: flex;
+            justify-content: space-between;
+            height: 29px;
+
+            .material-icons {
+              position: relative;
+              top: -11px;
+              font-size: 15px;
+              color: var(--color-text-white);
+              height: 40px;
+            }
+
+            span {
+              color: var(--color-text-white);
+            }
+          }
+
+          ::ng-deep.dropdown-content {
+            min-width: 170px;
+            top: 35px !important;
+            height: auto !important;
+            overflow: hidden;
+            transform: scaleX(0.75) scaleY(0.7) !important;
+
+            li {
+              margin: 0;
+              background: var(--background-header);
+
+              a {
+                color: var(--color-text-white);
+                font-size: 17px;
+                display: block;
+                line-height: 27px;
+                padding: 11px 6px;
+                text-align: center;
+              }
+            }
+
+          }
+        }
+
+
+      }
+    }
+  }
+
+
+}
+
+
+::ng-deep .position-block-sheath {
+  display: flex;
+  justify-content: space-between;
+
+  .active-search {
+    display: flex;
+    justify-content: space-between;
+
+    .input[type=text]:not(.browser-default) {
+      position: absolute;
+      top: -15px;
+      max-width: 200px;
+      padding: 1px 10px;
+      border: none;
+      margin: 15px 0 2px 0;
+      font-size: 13px;
+      color: var(--background-header);
+      background: var(--color-text-white);
+      height: 31px;
+      right: 36px;
+      z-index: 100;
+    }
+
+    .valid[type=text]:not(.browser-default),
+    input.valid[type=text]:not(.browser-default):focus,
+    input[type=text]:not(.browser-default):focus:not([readonly]) {
+      box-shadow: 0 0 0 0;
+      border: none;
+      transition: all .3s ease-in;
+      background: var(--color-text-white);
+      color: var(--background-header);
+      max-width: 200px;
+    }
+  }
+
+  ::ng-deep .hidden-search {
+    display: none !important;
+    opacity: 0;
+    transition: 2s;
+
+    .input[type=text]:not(.browser-default) {
+
+    }
+  }
+
+}
+
+
+.btn-search {
+  margin: 0;
+  border: none;
+  background: var(--background-header);
+  color: var(--color-text-white);
+  font-size: 12px;
+  transition: all .5s ease-out;
+
+  .material-icons {
+    position: relative;
+    top: -14px;
+    height: 26px;
+  }
+
+  &:hover {
+    transition: all .5s ease-in;
+    cursor: pointer;
+    background: var(--color-text-white);
+    color: var(--background-header);
+  }
+
+}
+
+.btn-hidden {
+  display: none !important;
+}
+
+@media all and (max-width: 600px) {
+  .nav {
+
+
+    .menu, .position-short-info-city, .nameApp {
+
+    }
+
+    .menu {
+
+
+      .line {
+
+      }
+
+      &:hover {
+
+      }
+    }
+
+    .nameApp {
+      display: none;
+    }
+
+    .menu-active {
+
+
+      .line {
+
+      }
+
+      .line:first-child {
+
+      }
+
+      .line:last-child {
+
+      }
+
+      &:hover {
+
+      }
+    }
+
+    .position-short-info-city {
+      ul {
+        li {
+
+
+          img {
+
+          }
+
+          .dropdown-trigger {
+
+
+            .material-icons {
+
+            }
+
+            span {
+
+            }
+          }
+
+          ::ng-deep.dropdown-content {
+
+            li {
+
+              a {
+
+              }
+            }
+
+          }
+        }
+
+
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,541 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/materialize/css/materialize.min.css';
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Solway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+html {
+  scroll-behavior: smooth; // стиль для поавной прокрутки страници ViewportScroller
+}
+
+body {
+  //max-width: 1900px;
+  font-family: 'Solway', serif;
+  //font-family: 'Marck Script', cursive;
+  //font-family: 'Open Sans Condensed', sans-serif;
+  height: 100vh;
+  background: var(--background-header);
+}
+
+:root {
+  --background-header: #6996C1;
+  --color-text-white: #FFFFFF;
+}
+
+:root {
+  --fontFamily-1: 'Solway', serif;
+  --fontFamily-2: 'Marck Script', cursive;
+  --fontFamily-3: 'Open Sans Condensed', sans-serif;
+}
+
+.loading {
+  max-width: 100%;
+  height: 100vh;
+  background: #6996C1;
+
+  .position-img {
+    max-width: 100%;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+
+    img {
+      margin: 10px;
+      max-width: 70%;
+      background-size: cover;
+      position: absolute;
+      left: 15%;
+    }
+  }
+}
+
+body {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  //table {
+  //  td {
+  //    margin: auto 5px !important;
+  //  }
+  //}
+
+  button {
+    outline: 0 !important;
+  }
+;
+}
+
+.img200 {
+  background-image: url("src/assets/img/200.jpg");
+}
+
+.img201 {
+  background-image: url("src/assets/img/201.jpg");
+}
+
+.img202 {
+  background-image: url("src/assets/img/202.jpg");
+}
+
+.img210 {
+  background-image: url("src/assets/img/210.jpg");
+}
+
+.img211 {
+  background-image: url("src/assets/img/211.jpg");
+}
+
+.img212 {
+  background-image: url("src/assets/img/212.jpg");
+}
+
+.img221 {
+  background-image: url("src/assets/img/221.jpg");
+}
+
+.img230 {
+  background-image: url("src/assets/img/230.jpg");
+}
+
+.img231 {
+  background-image: url("src/assets/img/231.jpg");
+}
+
+.img232 {
+  background-image: url("src/assets/img/232.jpg");
+}
+
+.img300 {
+  background-image: url("src/assets/img/300.jpg");
+}
+
+.img301 {
+  background-image: url("src/assets/img/301.jpg");
+}
+
+
+.img302 {
+  background-image: url("src/assets/img/302.jpg");
+}
+
+.img310 {
+  background-image: url("src/assets/img/310.jpg");
+}
+
+.img311 {
+  background-image: url("src/assets/img/311.jpg");
+}
+
+.img312 {
+  background-image: url("src/assets/img/312.jpg");
+}
+
+.img313 {
+  background-image: url("src/assets/img/313.jpg");
+}
+
+.img314 {
+  background-image: url("src/assets/img/314.jpg");
+}
+
+.img321 {
+  background-image: url("src/assets/img/321.jpg");
+}
+
+.img500 {
+  background-image: url("src/assets/img/500.jpg");
+}
+
+.img501 {
+  background-image: url("src/assets/img/501.jpg");
+}
+
+.img502 {
+  background-image: url("src/assets/img/502.jpg");
+}
+
+.img503 {
+  background-image: url("src/assets/img/503.jpg");
+}
+
+.img504 {
+  background-image: url("src/assets/img/504.jpg");
+}
+
+
+.img511 {
+  background-image: url("src/assets/img/511.jpg");
+}
+
+.img520 {
+  background-image: url("src/assets/img/520.jpg");
+}
+
+.img521 {
+  background-image: url("src/assets/img/521.jpg");
+}
+
+.img522 {
+  background-image: url("src/assets/img/522.jpg");
+}
+
+.img531 {
+  background-image: url("src/assets/img/531.jpg");
+}
+
+.img600 {
+  background-image: url("src/assets/img/600.jpg");
+}
+
+.img601 {
+  background-image: url("src/assets/img/601.jpg");
+}
+
+.img602 {
+  background-image: url("src/assets/img/602.jpg");
+}
+
+.img611 {
+  background-image: url("src/assets/img/611.jpg");
+}
+
+.img612 {
+  background-image: url("src/assets/img/612.jpg");
+}
+
+.img613 {
+  background-image: url("src/assets/img/613.jpg");
+}
+
+.img615 {
+  background-image: url("src/assets/img/615.jpg");
+}
+
+
+.img616 {
+  background-image: url("src/assets/img/616.jpg");
+}
+
+.img620 {
+  background-image: url("src/assets/img/620.jpg");
+}
+
+.img621 {
+  background-image: url("src/assets/img/621.jpg");
+}
+
+.img622 {
+  background-image: url("src/assets/img/622.jpg");
+}
+
+.img701 {
+  background-image: url("src/assets/img/701.jpg");
+}
+
+.img711 {
+  background-image: url("src/assets/img/711.jpg");
+}
+
+.img721 {
+  background-image: url("src/assets/img/721.jpg");
+}
+
+.img731 {
+  background-image: url("src/assets/img/731.jpg");
+}
+
+.img741 {
+  background-image: url("src/assets/img/741.jpg");
+}
+
+.img751 {
+  background-image: url("src/assets/img/751.jpg");
+}
+
+.img761 {
+  background-image: url("src/assets/img/761.jpg");
+}
+
+.img762 {
+  background-image: url("src/assets/img/762.jpg");
+}
+
+.img771 {
+  background-image: url("src/assets/img/771.jpg");
+}
+
+.img781 {
+  background-image: url("src/assets/img/+781.jpg");
+}
+
+.img800 {
+  background-image: url("src/assets/img/800.jpg");
+}
+
+.img801 {
+  background-image: url("src/assets/img/801.jpg");
+}
+
+.img802 {
+  background-image: url("src/assets/img/802.jpg");
+}
+
+.img803 {
+  background-image: url("src/assets/img/803.jpg");
+}
+
+.img804 {
+  background-image: url("src/assets/img/804.jpg");
+}
+
+.imgDefault {
+  background-image: url("src/assets/img/imgDefault.jpg");
+  background-repeat: no-repeat;
+}
+
+.imgOptions {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block-loader {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .loaderApplication {
+    background-image: url("src/assets/img/loading.gif");
+    width: 400px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+
+  }
+}
+
+
+//______________________sprite_____________________
+/* Generated by http://css.spritegen.com CSS Sprite Generator */
+
+.snow-at-night, .storm, .wind, .thunderstorm, .thunderstorm-at-night,
+.rain, .snow, .clear-night, .rain-night, .rain-day,
+.broken-clouds-night,
+
+,
+.broken-clouds-day, .dust, .clear-day, .temperature,
+.fog-at-night, .fog-at-day, .few-clouds-night, .few-clouds, .windy,
+.few-clouds2, .humidity {
+  display: inline-block;
+  background: url('src/assets/img/sprite.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.snow-at-night {
+  background-position: -10px -0px;
+  width: 58px;
+  height: 58px;
+}
+
+.storm {
+  background-position: -10px -68px;
+  width: 48px;
+  height: 48px;
+}
+
+.wind {
+  background-position: -10px -126px;
+  width: 48px;
+  height: 48px;
+}
+
+.thunderstorm {
+  background-position: -10px -184px;
+  width: 48px;
+  height: 48px;
+}
+
+.thunderstorm-at-night {
+  background-position: -10px -242px;
+  width: 48px;
+  height: 48px;
+}
+
+.rain {
+  background-position: -10px -300px;
+  width: 48px;
+  height: 48px;
+}
+
+.snow {
+  background-position: -10px -358px;
+  width: 48px;
+  height: 48px;
+}
+
+.clear-night {
+  background-position: -10px -416px;
+  width: 48px;
+  height: 48px;
+}
+
+.rain-night {
+  background-position: -10px -474px;
+  width: 48px;
+  height: 48px;
+}
+
+.rain-day {
+  background-position: -10px -532px;
+  width: 48px;
+  height: 48px;
+}
+
+.broken-clouds-night {
+  background-position: -10px -590px;
+  width: 48px;
+  height: 48px;
+}
+
+.broken-clouds-day {
+  background-position: -10px -648px;
+  width: 48px;
+  height: 48px;
+}
+
+.dust {
+  background-position: -10px -706px;
+  width: 48px;
+  height: 48px;
+}
+
+.clear-day {
+  background-position: -10px -764px;
+  width: 48px;
+  height: 48px;
+}
+
+.temperature {
+  background-position: -10px -822px;
+  width: 48px;
+  height: 48px;
+  transform: scale(.4);
+  position: relative;
+  top: 18px;
+  left: 16px;
+}
+
+.fog-at-night {
+  background-position: -10px -880px;
+  width: 48px;
+  height: 48px;
+}
+
+.fog-at-day {
+  background-position: -10px -938px;
+  width: 48px;
+  height: 48px;
+}
+
+.few-clouds-night {
+  background-position: -10px -996px;
+  width: 48px;
+  height: 48px;
+}
+
+.few-clouds {
+  background-position: -10px -1054px;
+  width: 48px;
+  height: 48px;
+}
+
+.windy {
+  background-position: -10px -1112px;
+  width: 40px;
+  height: 40px;
+}
+
+.few-clouds2 {
+  background-position: -10px -1162px;
+  width: 30px;
+  height: 30px;
+}
+
+.humidity {
+  background-position: -10px -1202px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  right: 3px;
+}
+
+
+
+
+.windSpeedDeg, .pressure, .pressure2, .visibility, .windSpeedDeg, .windSpeedDeg2 {
+  display: inline-block;
+  background: url('src/assets/img/sprite2.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+
+}
+
+.windSpeedDeg {
+  background-position: -10px -0px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform: scale(.65);
+  top: 13px;
+  right: -6px;
+}
+
+.pressure {
+  background-position: -10px -50px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transform: scale(.8);
+  top: 8px;
+  right: 7px;
+}
+
+.pressure2 {
+  background-position: -10px -90px;
+  width: 20px;
+  height: 20px;
+}
+
+.visibility {
+  background-position: -10px -120px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  right: 4px;
+}
+
+.windSpeedDeg2 {
+  background-position: -10px -150px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  right: -8px;
+}

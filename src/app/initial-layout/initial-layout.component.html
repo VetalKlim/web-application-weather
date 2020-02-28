@@ -1,0 +1,18 @@
+<div class="main" [@animations-main]>
+  <div class="position">
+    <div class="header" [@animations-header]>
+      <p class="text">Application weather </p>
+    </div>
+    <div class="img" [@animation-img]>
+      <img src="https://i.pinimg.com/originals/a1/e0/e8/a1e0e82e1cf23a9036e98ba202749edd.gif" alt="sdas">
+    </div>
+    <div class="timer" *ngIf="timer <= 10">
+      <span class="number">{{timer}}</span>
+    </div>
+<!--    <div class="btn-block" [@animation-btn]>-->
+<!--      <button (click)="mainClick()" class="btn"> Войти</button>-->
+<!--    </div>-->
+  </div>
+</div>
+
+

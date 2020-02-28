@@ -1,0 +1,34 @@
+<div class="menu">
+  <span class="header-menu">Application Weather</span>
+  <div class="imgMenu">
+  </div>
+  <div class="position">
+    <p class="description-menu">Населенные пункты в радиусе 5км</p>
+    <table class="city"
+           (click)="closeMenu()"
+           [routerLinkActiveOptions]="{exact: true}"
+           routerLinkActive="activeLink"
+           [routerLink]="['/weather/detailOfCity',c.idCity]"
+           *ngFor="let c of dataCitiesNearby">
+      <td class="cityName">{{c.name}}</td>
+      <td class="temp"> {{c.temp}} ℃</td>
+      <td class="icon">
+        <span class="corrected-icon-position" [ngClass]="c.icon | iconPipe"></span>
+      </td>
+    </table>
+  </div>
+  <div class="favorite-cities">
+    <span class="favorite-cities-header">Любимые города</span>
+    <ul *ngFor="let localCity of localStorageCity">
+      <li class="item-city"
+          (click)="closeMenu()"
+          [routerLink]="['/weather/detailOfCity',localCity.id]"
+      >
+        <span class="name-city">{{localCity.name}}</span>
+        <span (click)="deleteCity(localCity.id)" class="btn-delete">
+          <i class="material-icons">clear</i>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>

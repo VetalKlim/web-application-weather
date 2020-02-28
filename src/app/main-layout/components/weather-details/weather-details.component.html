@@ -1,0 +1,99 @@
+<app-loader *ngIf="!cityInformationWeather; else content"></app-loader>
+<ng-template #content>
+  <div class="content"
+       [@visualAnimation]
+       *ngFor="let city of cityInformationWeather"
+       [ngClass]="city.idWeather | picturePipes">
+    <div class="nawWeather">
+      <div class="card-now-weather">
+        <h4 class="nameCity">{{city.name}}</h4>
+        <div class="icon-now-city-weather">
+          <span [ngClass]="city.icon | iconPipe"></span>
+        </div>
+        <div class="temp" *ngIf="city.temp">
+          <span class="tempSize"> {{city.temp}} ℃</span>
+        </div>
+        <div class="description">{{city.description}}</div>
+
+        <div class="detail-info">
+          <div class="humidity-info" *ngIf="city.humidity >= 0">
+            <span class="humidity"></span>
+            <span class="humidity-text">{{city.humidity}} %</span>
+          </div>
+          <div class="clouds-info" *ngIf="city.clouds >= 0">
+            <span class="broken-clouds-night"></span>
+            <span class="clouds-text"> {{city.clouds}}%</span>
+          </div>
+          <div class="wind-info" *ngIf="city.windSpeed">
+            <span class="wind"></span>
+            <span class="wind-text">{{city.windSpeed }} м/с</span>
+            <span class="windSpeedDeg2"
+                  [ngStyle]="{transform: 'rotate(' + city.windDeg +'deg)'}"></span>
+          </div>
+        </div>
+        <div class="detail-info">
+          <div *ngIf="city.pressure">
+            <span class="pressure"></span>
+            <span>{{city.pressure}} <small>мм рт.ст.</small> </span>
+          </div>
+          <div *ngIf="city.visibility">
+            <span class="visibility"></span>
+            <span>{{city.visibility}} км.</span>
+          </div>
+          <button class="btn-next" [routerLink]="['/weather/detailOfCityGroup',city.idCity]">Погода на 5 дней</button>
+        </div>
+
+      </div>
+      <div [ngClass]="{'arrow-bottom': arrowDown, 'arrow-bottom-hidden': !arrowDown}">
+        <i class="material-icons" (click)="scrollBottom()">arrow_downward</i>
+      </div>
+    </div>
+
+    <div #carousel
+         [@visualAnimation]
+         class="carousel weather-time">
+      <div  [ngClass]="{'arrow-top': arrowTop, 'arrow-top-hidden': !arrowTop}">
+        <i class="material-icons" (click)="scrollTop()">arrow_upward</i>
+      </div>
+      <div class="card-time-weather carousel-item"
+           *ngFor="let timeWeather of timeWeatherForecast">
+        <small class="data-weather">{{timeWeather.data}}</small>
+        <div class="card-time-weather__info">
+          <div class="position-data">
+            <i class="material-icons"> schedule</i>
+            <span>
+            {{timeWeather.time}}
+          </span>
+          </div>
+          <div class="position-icon">
+            <span class="corrected-icon" [ngClass]="timeWeather.icon | iconPipe"></span>
+            <div>
+              <span class="temperature"></span>
+              <span>
+                 {{timeWeather.temp}} ℃
+              </span>
+            </div>
+          </div>
+          <div class="description-weather">
+            <span> {{timeWeather.description}}</span>
+          </div>
+          <div class="position-info">
+            <div class="humidity-info">
+              <span class="humidity"></span>
+              <span class="humidity-text">{{timeWeather.humidity}}%</span>
+            </div>
+            <div class="wind-info" *ngIf="timeWeather.windSpeed >= 0">
+              <span class="wind"></span>
+              <span class="wind-text">{{timeWeather.windSpeed}} м/с</span>
+            </div>
+            <div class="clouds-info" *ngIf="timeWeather.clouds >= 0">
+              <span class="broken-clouds-night"></span>
+              <span class="clouds-text">{{timeWeather.clouds}}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+

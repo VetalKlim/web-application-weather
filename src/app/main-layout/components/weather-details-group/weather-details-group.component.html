@@ -1,0 +1,54 @@
+<app-loader *ngIf="!weatherFiveDays; else content"></app-loader>
+<ng-template #content>
+  <div [@visualAnimation] class="content">
+    <div #carousel class="carousel carousel-slider">
+      <div class="card-day-weather carousel-item .imgOptions"
+           [ngClass]="day.idWeather | picturePipes"
+           [@visualAnimation]
+           *ngFor="let day of weatherFiveDays">
+        <div class="card-day-weather__position">
+          <h4 class="nameCity">{{day.name}}</h4>
+          <div class="weather-icon">
+            <span [ngClass]="day.icon | iconPipe"></span>
+          </div>
+          <div class="temp">
+            <span class="info-weather">{{day.temp}} ℃</span>
+          </div>
+          <div class="weather-description">
+            <span>{{day.description}}</span>
+          </div>
+          <div class="data-weather">
+            <span class="data-weather__text">{{day.day}}</span>
+            <span class="data-weather__data">{{day.data}}</span>
+          </div>
+          <div class="detail-info">
+            <div class="humidity-info" *ngIf="day.humidity >= 0">
+              <span class="humidity"></span>
+              <span class="humidity-text">{{day.humidity}} %</span>
+            </div>
+
+            <div class="wind-info" *ngIf="day.windSpeed">
+              <span class="wind"></span>
+              <span class="wind-text">{{day.windSpeed }} м/с</span>
+              <span class="windSpeedDeg2"
+                    [ngStyle]="{transform: 'rotate(' + day.windDeg +'deg)'}"></span>
+            </div>
+          </div>
+          <div class="detail-info">
+            <div *ngIf="day.pressure">
+              <span class="pressure"></span>
+              <span>{{day.pressure}} <small>мм рт.ст.</small> </span>
+            </div>
+            <div class="clouds-info" *ngIf="day.clouds >= 0">
+              <span class="broken-clouds-night"></span>
+              <span class="clouds-text"> {{day.clouds}}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+

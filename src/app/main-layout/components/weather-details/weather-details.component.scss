@@ -1,0 +1,339 @@
+.content {
+  background-size: cover;
+  color: white;
+  min-height: 96.3vh;
+
+  .nawWeather {
+    padding-top: 60px;
+
+    .card-now-weather {
+      text-align: center;
+      padding: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgb(0, 0, 0, 0.3);
+
+      .nameCity {
+        margin: 10px;
+      }
+
+      .icon-now-city-weather {
+        margin: 15px 10px 10px 10px;
+        padding: 10px;
+
+      }
+
+      .temp {
+        color: var(--color-text-white);
+
+        .tempSize {
+          font-size: 30px;
+        }
+      }
+
+      .description {
+        font-size: 17px;
+      }
+
+      .detail-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 10px 5px;
+
+        .humidity-info {
+          .humidity-text {
+          }
+        }
+
+        .clouds-info {
+          .broken-clouds-night {
+            position: relative;
+            transform: scale(.6);
+            top: 18px;
+            left: 7px;
+          }
+        }
+
+        .wind-info {
+          .wind {
+            position: relative;
+            transform: scale(0.4);
+            top: 18px;
+            left: 7px;
+          }
+        }
+
+        .btn-next {
+          background: transparent;
+          color: #CDE6FE;
+          padding: 5px;
+          border: 1px solid #CDE6FE;
+          font-size: 13px;
+          transition: all .4s ease-in;
+
+          &:hover {
+            cursor: pointer;
+            border: 1px solid var(--background-header);
+          }
+        }
+      }
+
+    }
+
+    .arrow-bottom {
+      display: none;
+    }
+
+    .arrow-bottom-hidden {
+      display: none;
+    }
+  }
+
+  .weather-time {
+    .arrow-top {
+      display: none;
+    }
+
+    .arrow-top-hidden {
+      display: none;
+    }
+
+    .card-time-weather {
+      box-shadow: 0 1px 2px black;
+      background: rgb(157, 157, 165, 0.6);
+      margin: 10px 2px;
+      min-width: 300px;
+      padding: 10px;
+      border-radius: 2px;
+      text-align: center;
+      height: 220px;
+
+      .data-weather {
+        position: relative;
+        top: -14px;
+        left: -130px;
+      }
+
+      &__info {
+        .position-data {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .material-icons {
+            position: relative;
+            left: -9px;
+          }
+        }
+
+        .position-icon {
+          display: flex;
+          justify-content: center;
+          margin: 10px 5px;
+
+          .corrected-icon {
+            transform: scale(.7);
+            position: relative;
+            top: 15px;
+          }
+        }
+
+        .description-weather {
+          span {
+            font-size: 14px;
+            border-bottom: 1px solid white;
+          }
+
+        }
+
+        .position-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .humidity-info {
+            .humidity {
+              transform: scale(.8);
+            }
+
+            .humidity-text {
+              font-size: 12px;
+            }
+          }
+
+          .wind-info {
+            .wind {
+              position: relative;
+              transform: scale(0.3);
+              top: 18px;
+              left: 7px;
+            }
+
+            .wind-text {
+              font-size: 12px;
+            }
+          }
+
+          .clouds-info {
+            .broken-clouds-night {
+              position: relative;
+              transform: scale(0.5);
+              top: 18px;
+              left: 7px;
+            }
+
+            .clouds-text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    ::ng-deep.active {
+      background: rgb(0, 0, 0, 0.8) !important;
+      transition: 0.02s;
+    }
+  }
+
+}
+
+
+@media all and (max-width: 800px) {
+  .content {
+    .nawWeather {
+      padding-top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+
+      .card-now-weather {
+        margin: auto;
+
+      }
+
+      .arrow-bottom {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -35px;
+        padding: 10px;
+        background: rgb(0, 0, 0, 0.3);
+        width: 50px;
+        margin: 0 auto;
+      }
+
+      .arrow-bottom-hidden {
+        display: none;
+      }
+    }
+
+
+    .weather-time {
+      padding-top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-perspective: 500px;
+      -webkit-transform-origin: 0% 0%;
+
+      .arrow-top {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: rgb(0, 0, 0, 0.3);
+        width: 50px;
+        margin: 0 auto;
+        z-index: 1000;
+      }
+
+      .arrow-top-hidden {
+        display: none;
+      }
+
+      .card-time-weather {
+        margin: auto;
+
+      }
+
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .content {
+    .nawWeather {
+      .card-now-weather {
+        width: 100%;
+
+        .nameCity {
+          margin: 5px;
+          font-size: 18px;
+        }
+
+        .icon-now-city-weather {
+          margin: 5px;
+          padding: 5px;
+          height: 27px;
+          position: relative;
+          top: -10px;
+
+          span {
+            transform: scale(0.5);
+          }
+        }
+
+        .temp {
+          .tempSize {
+            font-size: 20px;
+          }
+        }
+
+        .description {
+          font-size: 15px;
+        }
+
+        .detail-info {
+          padding: 5px;
+          height: 45px;
+          justify-content: space-evenly;
+
+
+        }
+
+      }
+      .arrow-bottom {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -35px;
+        padding: 10px;
+        background: rgb(0, 0, 0, 0.3);
+        width: 50px;
+        margin: 0 auto;
+      }
+      .arrow-bottom-hidden {
+        display: none;
+      }
+    }
+    .weather-time {
+      padding-top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      .arrow-top {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: rgb(0, 0, 0, 0.3);
+        width: 50px;
+        margin: 0 auto;
+      }
+    }
+
+  }
+}
+

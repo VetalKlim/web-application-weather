@@ -1,0 +1,15 @@
+<app-loader *ngIf="!weatherIsNear; else content"></app-loader>
+<ng-template #content>
+  <app-header class="header"
+              [closeMenu]="menu"
+              (setActiveMenu)="showMenu($event)"></app-header>
+  <app-menu [dataCitiesNearby]="weatherIsNear"
+            (close)="showMenu($event)"
+            [ngClass]="{'menu-show': menu, 'menu-hidden': !menu}"></app-menu>
+  <main
+    (click)="search()"
+    [ngClass]="{'active-menu': menu, 'not-active-menu': !menu }" class="active-menu">
+    <router-outlet></router-outlet>
+  </main>
+</ng-template>
+
